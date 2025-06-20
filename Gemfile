@@ -7,4 +7,4 @@ gem "sinatra", "~> 3.0.6"
 gem "sinatra-contrib"
 gem "better_errors"
 gem "binding_of_caller"
-
+gem "htmlbeautifier"
