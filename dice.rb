@@ -35,10 +35,6 @@ get("/dice/2/6") do
 end
 
 
-  "<h1>2d6</h1>
-  <p>#{outcome}</p>"
-
-
 get("/dice/2/10") do
   first_die = rand(1..10)
   second_die = rand(1..10)
@@ -46,23 +42,17 @@ get("/dice/2/10") do
 
   @outcome = "You rolled a #{first_die} and a #{second_die} for a total of #{sum}."
   
-  erb(:two_six)
+  erb(:two_ten)
 end
 
-  "<h1>2d10</h1>
-  <p>#{outcome}</p>"
 
 get ("/dice/1/20") do
   first_die = rand(1..20)
 
   @outcome = "You rolled a #{first_die}"
 
-  erb(:two_six)
+  erb(:one_twenty)
 end
-
-  "<h1>1d20</h1>
-  <p>#{outcome}</p>"
-
 
 get("/dice/5/4") do
   first_die = rand(1..4)
@@ -74,12 +64,8 @@ get("/dice/5/4") do
 
   @outcome = "You rolled a #{first_die}, #{second_die} , #{third_die} , #{fourth_die} , #{fifth_die} for a sum of #{sum}."
 
-  erb(:two_six)
+  erb(:five_four)
 end
-
-  "<h1>5d4</h1>
-  <p>#{outcome}</p>"
-
 
 get("/dice/3/6") do
   first_die = rand(1..6)
@@ -89,9 +75,5 @@ get("/dice/3/6") do
 
   @outcome = "You rolled 1st:#{first_die}, 2nd:#{second_die} , 3rd:#{third_die}.  For a total of #{sum}!"
 
-    erb(:two_six)
+    erb(:three_six)
 end
-
-  "<h1>3d6</h1>
-  <p>#{outcome}</p>"
-
